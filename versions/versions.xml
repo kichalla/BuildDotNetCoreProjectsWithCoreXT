@@ -1,0 +1,24 @@
+﻿<!--Copyright (c) Microsoft Corporation. All rights reserved.-->
+
+<!--
+
+  This is your versions file.  You can control assembly and file versions independently, and you can have
+  multiple different versioning nodes in here.  Projects define the following to choose their version:
+    <AssemblyVersionName>asmver</...>
+    <AssemblyFileVersionName>filever</...>
+
+  Generally, you want a granular filever, and an asmver that locks to major.minor.0.0 for binding purposes.
+
+  Your build host will determine how you rev or dynamically control the versions for increasing values
+  and uniqueness.
+
+-->
+<root>
+  <versions>
+    <version name="asmver" value="1.0.0.0"/>
+    <version name="filever" value="1.0.0.0"/>
+  </versions>
+
+  <assemblies />
+  <publicKeyTokens />
+</root>

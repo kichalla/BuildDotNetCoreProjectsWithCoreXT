@@ -1,0 +1,9 @@
+{
+  /* 
+     Quickbuild Configuration
+     https://1eswiki.com/wiki/CloudBuild_Onboarding#1.3.29_Configure_Root_Directories 
+  */
+  "SourceRootDirs": [ "src" ],
+  "OutputRootDirs": [ "target", "out" ],
+  "ReleaseRootDirs": [ "out\\distrib" ]
+}

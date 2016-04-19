@@ -1,0 +1,13 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+       Quickbuild uses this project to do version generation once, and then all concurrent projects use that version
+       information.  When you have Razzle mapped in, the heavy lifting is done in makefil0 as part of the 
+       BUILD_PRE_PROCESS step so an empty project is fine.  For pure-msbuild folks, you may or may not have your
+       own custom versioning hooks to put here for Q.  See http://1eswiki.com for Q details
+  -->
+  <Target Name="Build">
+
+  </Target>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(EnvironmentConfig)" />
+
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <AssemblyName>Basic.ClassLibrary</AssemblyName>
+    <ProjectGuid>{0852A7CA-7A48-4A46-9C84-6CB063257272}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Simple.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Robocopy Include="$(OutputPath)$(AssemblyName).dll">
+      <DestinationFolder>$(OutputRoot)\target\$(BuildType)\$(BuildArchitecture)\msbuild</DestinationFolder>
+    </Robocopy>
+  </ItemGroup>
+  
+  <Import Project="$(ExtendedTargetsPath)\Microsoft.CSharp.targets" />
+
+</Project>
