@@ -38,13 +38,13 @@ GOTO :EOF
 @REM -- Standard Corext Bootstrapper
 FOR %%I IN (%~dp0\.corext\..) DO @SET ROOT=%%~fI
 SET BaseDir=%ROOT%
-SET OBJECT_ROOT=%ROOT%\out\obj
 SET OBJECT_ROOT=%ROOT%
+
 SET CoreXTConfig=%ROOT%\.corext
-SET PackageAddressGenDir=%CoreXTConfig%\gen
-IF DEFINED CorextBranch (SET _BUILDBRANCH=%CorextBranch%) ELSE (SET _BUILDBRANCH=%CorextProduct%)
+
 IF NOT DEFINED CoreXTConfigFile SET CoreXTConfigFile=%CoreXTConfig%\corext.config
-IF NOT DEFINED PackageAddressGenDir SET PackageAddressGenDir=%ROOT%\out\gen
+IF NOT DEFINED PackageAddressGenDir SET PackageAddressGenDir=%ROOT%\.corext\gen
+IF DEFINED CoreXTConfigScenario SET CoreXTConfigFile=%CoreXTConfig%\configs\%CoreXTConfigScenario%.config
 
 %CoreXTConfig%\corextBoot.exe init -bootstrap
 IF ERRORLEVEL 1 ECHO [Error] CoreXT could not be properly initialized.  This enlistment window will not work. & EXIT /B 1
