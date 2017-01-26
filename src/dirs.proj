@@ -4,7 +4,7 @@
 
   <ItemGroup>
 
-      <ProjectFile Include="msbuild\test.csproj"/>
+      <ProjectFile Include="msbuild\Framework.v462.csproj"/>
 
   </ItemGroup>
 

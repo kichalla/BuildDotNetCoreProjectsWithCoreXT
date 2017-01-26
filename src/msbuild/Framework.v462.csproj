@@ -1,0 +1,23 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(EnvironmentConfig)" />
+
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Framework.v462</AssemblyName>
+    <ProjectGuid>{F7CFC86D-579F-457C-9ACF-20F2FF1DC352}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Source Files -->
+    <Compile Include="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+
+  <Import Project="$(ExtendedTargetsPath)\Microsoft.CSharp.targets" />
+
+</Project>
