@@ -36,6 +36,8 @@ packages
 # quickbuild.exe
 /version/
 /VersionGeneratingLogs/
+/VersionGeneration/
+__cacheOutput/
 QLogs
 QLocal
 QTestLogs

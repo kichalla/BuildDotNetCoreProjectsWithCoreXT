@@ -14,6 +14,7 @@ GOTO :Start
 
 @REM -- Product being built
 SET CorextProduct=[Your Product]
+SET _BUILDBRANCH=%CorextProduct%
 
 @REM -- Pull packages and setup the enlistment
 CALL :ConfigureCorext
