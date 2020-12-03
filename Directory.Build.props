@@ -1,0 +1,20 @@
+<Project>
+    <PropertyGroup>
+      <!-- This is used to help determine whether this file has already been imported,
+           which helps with the complicated importing across the CoreXT and non-CoreXT project tooling -->
+      <DirectoryBuildPropsHasBeenImported>true</DirectoryBuildPropsHasBeenImported>
+         
+      <!-- Enlistment root is based off of wherever this file is. -->
+      <EnlistmentRoot Condition=" '$(EnlistmentRoot)' == '' ">$(MSBuildThisFileDirectory.TrimEnd('\\'))</EnlistmentRoot>
+         
+      <!-- Disable default none items to avoid excessive globbing which can be bad for perf in large repos -->
+      <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+         
+      <!-- Disable transitive project references to avoid excessive QuickBuild sandboxing in large repos -->
+      <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+    </PropertyGroup>
+    <Import Project="$(MSBuildBridge)\MSBuild.Bridge.CoreXT.props" />
+       
+    <!-- Import the branch's build.props, but only if it hasn't already been imported, eg by CoreXT's EnvironmentConfig. -->
+    <Import Project="$(EnlistmentRoot)\build\msbuild\v12.0\build.props" Condition=" '$(BuildPropsHasBeenImported)' != 'true' " />
+  </Project>

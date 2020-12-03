@@ -1,5 +1,15 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">    
 
+  <!-- Property to determine whether this file has already been imported -->            
+  <PropertyGroup>
+    <BuildPropsHasBeenImported>true</BuildPropsHasBeenImported>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(DirectoryBuildPropsHasBeenImported)' != 'true' ">
+    <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps>
+  </PropertyGroup>
+  <Import Project="$(BaseDir)\Directory.Build.props" Condition=" '$(DirectoryBuildPropsHasBeenImported)' != 'true' " />
+  <!-- Do not add anything above this line -->
+
   <PropertyGroup>
 
     <!-- should msbuild call out to nmake and makefil0 to generate versions -->

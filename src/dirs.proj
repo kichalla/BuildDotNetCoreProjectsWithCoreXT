@@ -5,6 +5,8 @@
   <ItemGroup>
 
       <ProjectFile Include="msbuild\Framework.v462.csproj"/>
+      <ProjectFile Include="classlibsample\classlibsample.csproj"/>
+      <ProjectFile Include="consoleapp\consoleapp.csproj"/>
 
   </ItemGroup>
 
